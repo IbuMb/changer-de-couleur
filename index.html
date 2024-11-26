@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Changer de couleur</h1>
+            <div id="color-box"></div><br><br>
+            <button id="change-color-btn">Changer de couleur</button>
+        </div>
+    </div>
+    <script>
+ var couleur = ["blue", "green","yellow","white","black"];
+        var i = 0;
+        document.getElementById("change-color-btn").addEventListener("click", () => {
+        document.getElementById("color-box").style.backgroundColor = couleur[i];
+        i = (i + 1) % couleur.length;
+        });
+
+    </script>
+</body>
+</html>
